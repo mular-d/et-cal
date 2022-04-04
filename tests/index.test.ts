@@ -1,10 +1,9 @@
-import { add } from "..";
+import { printDate } from '..'
 
-describe("add should calculate a sum properly", () => {
-  test("two positive numbers", () => {
-    expect(add(4, 5)).toBe(9);
-  });
-  test("two negative numbers", () => {
-    expect(add(-4, -5)).toBe(-9);
-  });
-});
+let date = new Date()
+
+describe('printDate should print the passed date', () => {
+  test('the current date', () => {
+    expect(printDate(date)).toBe(date.toString())
+  })
+})

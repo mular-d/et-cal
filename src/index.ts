@@ -1,16 +1,14 @@
 /**
- * @packageDocumentation A library starter that add two numbers
+ * @packageDocumentation A library for changing between ethiopian and gregorian calender
  */
 
 /**
- * Calculate the sum of two numbers
+ * Print the passed date
  *
- * @param a - first number
- * @param b - second number
+ * @param date - gregorian date
  *
  * @public
  */
-export function add(a: number, b: number): number {
-  const sum = a + b;
-  return sum;
+export function printDate(date: Date): string {
+  return date.toString()
 }

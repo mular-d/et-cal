@@ -2,14 +2,18 @@
   "extends": "../tsconfig.json",
   "references": [
     {
-      "name": "ts-lib-starter",
+      "name": "et-cal",
       "path": ".."
     }
   ],
   "compilerOptions": {
-    "types": ["jest"],
+    "types": [
+      "jest"
+    ],
     "rootDir": "..",
     "noEmit": true
   },
-  "include": ["."]
+  "include": [
+    "."
+  ]
 }
