@@ -1,0 +1,49 @@
+{
+  "name": "ts-lib-starter",
+  "version": "0.0.1",
+  "description": "A starter for creating libraries with typescript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "yarn build --watch --preserveWatchOutput",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/targerian1999/ts-lib-starter.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "MularD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/targerian1999/ts-lib-starter/issues"
+  },
+  "homepage": "https://github.com/targerian1999/ts-lib-starter#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.11.0",
+    "eslint-plugin-import": "^2.25.4",
+    "husky": "^7.0.0",
+    "jest": "^27.5.1",
+    "lint-staged": "^12.3.7",
+    "typescript": "^4.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": "eslint --fix src/**/*.ts"
+  }
+}
