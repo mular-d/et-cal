@@ -22,7 +22,7 @@ import { ethToGreg, gregToEth } from 'et-cal'
 const gregorianDate = ethToGreg(2014, 7, 26)
 const ethiopicDate = gregToEth(2022, 4, 4)
 
-console.log(gregorianDate) // { year: 2922, month: 4, day: 4}
+console.log(gregorianDate) // { year: 2022, month: 4, day: 4}
 console.log(ethiopicDate) // { year: 2014, month: 7, day: 26 }
 ```
 
