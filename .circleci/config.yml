@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   run-tests:
     docker:
-      - image: cimg/node:16
+      - image: cimg/node
     steps:
       - checkout
       - run:
