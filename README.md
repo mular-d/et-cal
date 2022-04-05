@@ -1,5 +1,5 @@
 # et-cal / Ethiopian Calendar
-[![CircleCI](https://circleci.com/gh/targerian1999/et-cal/tree/main.svg?style=svg)](https://circleci.com/gh/targerian1999/et-cal/tree/main)
+[![CircleCI](https://circleci.com/gh/targerian1999/et-cal/tree/main.svg?style=svg)](https://circleci.com/gh/targerian1999/et-cal/tree/main) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 A library that allows conversion of dates between gregorian and ethiopic calendars.
 
