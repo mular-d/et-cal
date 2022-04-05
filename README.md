@@ -1,4 +1,6 @@
 # et-cal / Ethiopian Calendar
+[![CircleCI](https://circleci.com/gh/targerian1999/et-cal/tree/main.svg?style=svg)](https://circleci.com/gh/targerian1999/et-cal/tree/main)
+
 A library that allows conversion of dates between gregorian and ethiopic calendars.
 
 This package is implemented using [Beyene-Kudlek](http://geez.org/Calendars/) algorithm.
