@@ -3,9 +3,12 @@ version: 2.1
 jobs:
   run-tests:
     docker:
-      - image: cimg/node
+      - image: cimg/node:17.8.0
     steps:
       - checkout
+      - run:
+          name: 'System information'
+          command: 'node --version'
       - run:
           name: "Install yarn dependencies"
           command: "yarn"
