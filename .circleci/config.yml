@@ -14,11 +14,11 @@ jobs:
           command: "yarn build"
       - run:
           name: "Run tests"
-          command: "yarn test"
+          command: "yarn test --json --outputFile=test-results.json"
       - store_test_results:
-          path: test-results
+          path: test-results.json
       - store_artifacts:
-          path: test-results
+          path: test-results.json
 workflows:
   build_test:
     jobs:
