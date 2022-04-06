@@ -4,6 +4,9 @@
   "description": "A library to convert between gregorian and ethiopian calender",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "yarn build --watch --preserveWatchOutput",
