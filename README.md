@@ -30,12 +30,6 @@ console.log(ethiopicDate) // { year: 2014, month: 7, day: 26 }
 console.log(gregToEth()) // return the current ethiopian date 
 ```
 
-### TODO
-- [ ] Return also amharic day names
-- [x] Convert the current date
-- [ ] Use ge'ez numbers
-- [ ] Return amharic name for hour division
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/targerian1999/et-cal/blob/main/LICENSE) file for details
