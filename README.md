@@ -16,6 +16,9 @@ or
 yarn add et-cal --dev
 ```
 ### Usage
+Pass the year, month and day parameters to the ethToGreg and gregToEth function to get the equivalent gregorian and ethiopian date respectively.
+If no parameters are passed to the gregToEth function it would return the current ethiopian date.
+
 ```typescript
 import { ethToGreg, gregToEth } from 'et-cal'
 
@@ -24,11 +27,12 @@ const ethiopicDate = gregToEth(2022, 4, 4)
 
 console.log(gregorianDate) // { year: 2022, month: 4, day: 4}
 console.log(ethiopicDate) // { year: 2014, month: 7, day: 26 }
+console.log(gregToEth()) // return the current ethiopian date 
 ```
 
 ### TODO
 - [ ] Return also amharic day names
-- [ ] Convert the current date
+- [x] Convert the current date
 - [ ] Use ge'ez numbers
 - [ ] Return amharic name for hour division
 

@@ -16,3 +16,14 @@ describe('should convert from gregorian to ethiopian date and vice versa', () =>
     })
   })
 })
+
+// Test the current date
+// describe('should return the current ethiopian date', () => {
+//   test('return ethiopian date', () => {
+//     expect(gregToEth()).toEqual({
+//       year: 2014,
+//       month: 7,
+//       day: 29,
+//     })
+//   })
+// })

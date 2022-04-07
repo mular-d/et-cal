@@ -8,7 +8,12 @@ import { jdnToGregorian } from './jdn_greg'
 import { ethToJDN } from './eth_jdn'
 import { gregorianToJDN } from './greg_jdn'
 
-import { JD_EPOCH_OFFSET_AMETE_MIHRET , GREGORIAN_MONTH, ETHIOPIC_MONTH, DAY } from './const'
+import {
+  JD_EPOCH_OFFSET_AMETE_MIHRET,
+  GREGORIAN_MONTH,
+  ETHIOPIC_MONTH,
+  DAY,
+} from './const'
 /**
  * Convert from ethiopian calender to gregorian
  *
@@ -21,8 +26,8 @@ import { JD_EPOCH_OFFSET_AMETE_MIHRET , GREGORIAN_MONTH, ETHIOPIC_MONTH, DAY } f
 
 export function ethToGreg(
   year: number,
-  month: ETHIOPIC_MONTH,
-  day: DAY
+  month: ETHIOPIC_MONTH = 1,
+  day: DAY = 1
 ): { year: number; month: number; day: number } {
   const era: number = JD_EPOCH_OFFSET_AMETE_MIHRET
   const date = jdnToGregorian(ethToJDN(+year, month, day, era))
@@ -40,10 +45,17 @@ export function ethToGreg(
  */
 
 export function gregToEth(
-  year: number,
-  month: GREGORIAN_MONTH,
-  day: DAY
+  year = 0,
+  month: GREGORIAN_MONTH = 1,
+  day: DAY = 1
 ): { year: number; month: number; day: number } {
+  if (year === 0 && month === 1 && day === 1) {
+    const now = new Date()
+    const nowYear = now.getFullYear()
+    const nowMonth = now.getMonth() + 1
+    const nowDay = now.getDate()
+    return jdnToEthiopic(gregorianToJDN(nowYear, nowMonth, nowDay))
+  }
   const date = jdnToEthiopic(gregorianToJDN(+year, month, day))
   return date
 }
