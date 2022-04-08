@@ -1,4 +1,4 @@
-import { gregToEth, ethToGreg } from '..'
+import { gregToEth, ethToGreg, fullEthDate } from '..'
 
 describe('should convert from gregorian to ethiopian date and vice versa', () => {
   test('gregorian to ethiopic date', () => {
@@ -27,3 +27,15 @@ describe('should convert from gregorian to ethiopian date and vice versa', () =>
 //     })
 //   })
 // })
+
+describe('get full ethiopian date', () => {
+  test('pass ethiopian date to get the full string', () => {
+    expect(fullEthDate(2014, 7, 30)).toEqual('ዓርብ፣ መጋቢት 30 ቀን 2014 ዓ/ም')
+  })
+  test('pass gregoraian date to get the ethiopian date full string', () => {
+    expect(fullEthDate(2022, 4, 8, false)).toEqual('ዓርብ፣ መጋቢት 30 ቀን 2014 ዓ/ም')
+  })
+  test('get pagume/month-13 date full string', () => {
+    expect(fullEthDate(2014, 13, 4)).toEqual('ዓርብ፣ ጳጉሜን 4 ቀን 2014 ዓ/ም')
+  })
+})

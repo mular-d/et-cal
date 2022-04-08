@@ -26,3 +26,36 @@ export function guessEra(
 ): number {
   return jdn >= JD_AM + 365 ? JD_AM : JD_AA
 }
+
+/**
+ * datermines the day name based on date
+ * @param {number} date
+ * @returns {string} dayName
+ */
+export function dayNames(date: number): string {
+  const dateNames = ['ሰኞ', 'ማክሰኞ', 'ረቡዕ', 'ሐሙስ', 'ዓርብ', 'ቅዳሜ', 'እሑድ']
+  if (dateNames[date]) {
+    return dateNames[date]
+  } else return 'undefined'
+}
+
+export function monthNames(month: number): string {
+  const monthNames = [
+    'መስከረም',
+    'ጥቅምት',
+    'ኅዳር',
+    'ታኅሣሥ',
+    'ጥር',
+    'የካቲት',
+    'መጋቢት',
+    'ሚያዝያ',
+    'ግንቦት',
+    'ሰኔ',
+    'ሐምሌ',
+    'ነሐሴ',
+    'ጳጉሜን',
+  ]
+  if (monthNames[month]) {
+    return monthNames[month]
+  } else return 'undefined'
+}

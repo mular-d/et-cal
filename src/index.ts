@@ -7,6 +7,7 @@ import { jdnToEthiopic } from './jdn_eth'
 import { jdnToGregorian } from './jdn_greg'
 import { ethToJDN } from './eth_jdn'
 import { gregorianToJDN } from './greg_jdn'
+import { dayNames, monthNames } from './util'
 
 import {
   JD_EPOCH_OFFSET_AMETE_MIHRET,
@@ -58,4 +59,40 @@ export function gregToEth(
   }
   const date = jdnToEthiopic(gregorianToJDN(+year, month, day))
   return date
+}
+
+/**
+ * Return full ethiopian date
+ * @param {number} year - Year
+ * @param {number} month - Month
+ * @param {number} day - Day
+ */
+
+export function fullEthDate(
+  year = 0,
+  month = 1,
+  day = 1,
+  ethiopian = true
+) {
+  if (ethiopian) {
+    const gregDate = jdnToGregorian(
+      ethToJDN(year, month, day, JD_EPOCH_OFFSET_AMETE_MIHRET)
+    )
+    const fullGreg: Date = new Date(
+      gregDate.year,
+      gregDate.month - 1,
+      gregDate.day
+    )
+    const date: number = fullGreg.getDay()
+    const dayName: string = dayNames(date - 1)
+    const monthName: string = monthNames(month - 1)
+    return `${dayName}፣ ${monthName} ${day} ቀን ${year} ዓ/ም`
+  } else {
+    const ethDate = jdnToEthiopic(gregorianToJDN(year, month, day))
+    const gregDate = new Date(year, month - 1, day)
+    const date = gregDate.getDay()
+    const dayName: string = dayNames(date - 1)
+    const monthName: string = monthNames(ethDate.month - 1)
+    return `${dayName}፣ ${monthName} ${ethDate.day} ቀን ${ethDate.year} ዓ/ም`
+  }
 }
