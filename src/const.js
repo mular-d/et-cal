@@ -1,0 +1,6 @@
+"use strict";
+exports.__esModule = true;
+exports.JD_EPOCH_OFFSET_GREGORIAN = exports.JD_EPOCH_OFFSET_AMETE_MIHRET = exports.JD_EPOCH_OFFSET_AMETE_ALEM = void 0;
+exports.JD_EPOCH_OFFSET_AMETE_ALEM = -285019; // ዓ/ዓ
+exports.JD_EPOCH_OFFSET_AMETE_MIHRET = 1723856; // ዓ/ም
+exports.JD_EPOCH_OFFSET_GREGORIAN = 1721426;
