@@ -63,7 +63,7 @@ export function gregToEth(
   if (day < 1 || day > 31) {
     return 'Day should be between 1 and 31'
   }
-  if (year === 0 && month === 1 && day === 1) {
+  if (year === 1 && month === 1 && day === 1) {
     const now = new Date()
     const nowYear = now.getFullYear()
     const nowMonth = now.getMonth() + 1
@@ -81,12 +81,7 @@ export function gregToEth(
  * @param {number} day - Day
  */
 
-export function fullEthDate(
-  year = 1,
-  month = 1,
-  day = 1,
-  ethiopian = true
-) {
+export function fullEthDate(year = 1, month = 1, day = 1, ethiopian = true) {
   if (ethiopian) {
     const gregDate = jdnToGregorian(
       ethToJDN(year, month, day, JD_EPOCH_OFFSET_AMETE_MIHRET)
