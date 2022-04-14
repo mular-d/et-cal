@@ -14,6 +14,15 @@ export function isGregorianLeap(year = 1): boolean {
 }
 
 /**
+ * determines if a Ethiopian year is leap year or not
+ *
+ * @param {number} year
+ * @return {boolean} 
+ */
+export function isEthiopianLeap(year = 1): boolean {
+  return year % 4 === 3
+}
+/**
  * guesses ERA from JDN
  *
  * @param  {Number} jdn
